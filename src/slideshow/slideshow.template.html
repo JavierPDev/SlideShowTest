@@ -1,0 +1,12 @@
+<div style="width: 500px;">
+  <div ng-if="$ctrl.error" class="alert alert-danger">
+    <pre>{{$ctrl.error | json}}</pre>
+  </div>
+  <div ng-if="$ctrl.slides">
+    <div uib-carousel active="0">
+      <div uib-slide ng-repeat="slide in $ctrl.slides track by $index" index="$index">
+        <img style="width: 100%" ng-src="{{slide.url}}">
+      </div>
+    </div>
+  </div>
+</div>
